@@ -1,0 +1,205 @@
+/*
+Box Model. Margin, border, padding.
+Set border-style first before border-width.
+Display properties: (Can be changed via display:____)
+    Block   - p, h1-h6, div, list, form
+            - takes up the whole row
+    Inline  - span, img, a
+            - only takes space it needs. can't change the width
+    Inline-Block    - also img??
+            - best of both worlds. can change width and be on the same line
+    None    - removes the element from the website like it doesn't exist
+Visibility:hidden - hides element but is still there
+Position properties:
+    Static  - all html element by default
+    Relative- position the element relative to how it would have been 
+              positioned had it been static
+            - it doesnt affect the position of anything else on screen
+              like it never moved
+            - can think of it as a margin
+    Absoute - parent should have a relative position
+            - positioning it relative to its parent
+            - takes the element out of the flow of the document
+            - containers, such as div, can be used to better fine tune the position
+              of the element
+    Fixed   - used to let the element stay in a specified position
+              even after scrolling
+            - often used in a nav bar or side bar
+Coordinate Properties: top, right, bottom, left
+Text-align  - property set inside the parent container
+Margin: auto- centers the element automatically horizontally or vertically
+            - may be used with other margin values
+Don't use unnecessary classes when it can be solved by the simple
+box model ideas
+Think about the color pallete and the font scheme of the website
+Font-family:
+    Monospace - mostly used as code font
+    Sans-serif - commonly used
+    Serif - commonly used
+    Cursive - never use
+    Fantasy - never use
+    format:
+        font-family: specific, less specific, ... ,default(serif, etc..);
+    use google fonts to embed fonts into your website
+Font size: 100% = 16px = 1em
+    Static  - px
+    Dynamic - %, em
+            - inherits size from parent. it adds up
+            - rem = root em = ignores parent settings
+            - use rem
+Float   - makes the text wrap around an element(images)
+        - only use when necessary (wrapping not positioning)
+Clear   - pushes the text below the floating image
+        - anti-float
+Use the filter property when changing images
+*/
+
+/**************************TAG SELECTORS**************************/
+body {
+    color: #40514E;
+    font-family: 'Merriweather', serif;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #66BFBF;
+    font-family: 'Sacramento', cursive;
+    font-size: 5.625rem;
+    margin: 50px auto 0;
+}
+
+h2 {
+    color: #66BFBF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+    border-color: #eaf6f6;
+    border-style: dotted;
+    border-width: 7px 0 0;
+    margin: 80px auto;
+    width: 4%;
+}
+
+p {
+    line-height: 2;
+}
+/**************************CLASS SELECTORS**************************/
+.bot_cloud {
+    bottom: 320px;
+    left: 20%;
+    position: absolute;
+}
+
+.bot_container {
+    background-color: #66bfbf;
+    padding: 30px 0 10px;
+}
+
+.btn {
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    background: #66BFBF;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+  
+.btn:hover {
+    background: #11999E;
+    text-decoration: none;
+}
+
+.contact_pic {
+    height: 60px;
+    width: 60px;
+}
+
+.contact_pic:hover {
+    height: 65px;
+    width: 65px;
+}
+
+.footer_pic {
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+    margin: 0 20px;
+}
+
+.footer_pic:hover {
+    filter: opacity(50%);
+}
+
+.mid_container {
+    padding: 50px 0;
+}
+
+.skill_pic_1 {
+    width: 20%;
+    float: left;
+    margin-right: 30px;
+    
+}
+
+.skill_pic_2 {
+    width: 20%;
+    float: right;
+    margin-left: 30px;
+}
+
+.skill_row {
+    width: 50%;
+    margin: 100px auto;
+    text-align: left;
+}
+
+.top_cloud {
+    position: absolute;
+    right: 20%;
+    top: 50px;
+}
+
+.top_container {
+    background-color: #eaf6f6;
+    padding-top: 110px;
+    position: relative;
+}
+
+/**************************ID SELECTORS**************************/
+#contact_phrase {
+    margin: 35px auto 50px;
+}
+
+#copyright {
+    color: #eaf6f6;
+    font-size: 0.7rem;
+    margin-top: 20px;
+}
+
+#intro_phrase {
+    font-weight: normal;
+}
+
+#profile_phrase {
+    margin: 40px auto 0;
+    width: 25%;
+}
+
+#profile_pic {
+    background-color: #66bfbf;
+    border-radius: 100%;
+    height: 150px;
+    margin-bottom: 20px;
+    width: 150px;
+}
